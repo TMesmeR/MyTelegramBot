@@ -57,7 +57,12 @@ namespace MyTelegramBot.Contollers
             {
                 new KeyboardButton("Подсчет символов"),
                 new KeyboardButton("Сумма чисел")
-            });
+            })
+            { 
+                
+                ResizeKeyboard = true,
+                OneTimeKeyboard = false
+            };
             
 
             await _telegramClient.SendTextMessageAsync(chatId, "Выберите действие",replyMarkup: button, cancellationToken: cancellationToken);    
