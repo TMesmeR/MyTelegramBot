@@ -25,7 +25,7 @@ namespace MyTelegramBot.Visual
             };
 
 
-            await _telegramClient.SendTextMessageAsync(chatId, "Выберите действие", replyMarkup: button, cancellationToken: cancellationToken);
+            await _telegramClient.SendTextMessageAsync(chatId, "Сначала выберите действие", replyMarkup: button, cancellationToken: cancellationToken);
         }
     }
 }

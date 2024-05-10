@@ -27,6 +27,7 @@ namespace MyTelegramBot.Contollers
             switch (message.Text)
             {
                 case "/start":
+                    await botClient.SendTextMessageAsync(message.Chat.Id, "Данный бот имеет две функции.\n1: Подсчет символов.\n2: Сумму чисел");
                    await MainMenu.SendMainMenu(message.Chat.Id,_telegramClient, cancellationToken: ct);
                     break;
                 case "Подсчет символов":
